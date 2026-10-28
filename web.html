@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Abhi 💗</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffe0ec, #ffc2d8, #fff0f5);
+    font-family: Georgia, serif;
+    color: #8b214d;
+    text-align: center;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.card {
+    background: rgba(255,255,255,0.9);
+    max-width: 480px;
+    width: 100%;
+    margin: 25px auto;
+    padding: 30px 22px;
+    border-radius: 25px;
+    box-shadow: 0 10px 35px #d96b9650;
+    animation: appear 1s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.heart {
+    font-size: 60px;
+    animation: beat 1s infinite;
+}
+
+@keyframes beat {
+    50% { transform: scale(1.15); }
+}
+
+h1 {
+    font-size: 27px;
+    margin: 18px 0;
+}
+
+h2 {
+    font-size: 22px;
+    margin: 20px 0;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.9;
+    margin: 15px 0;
+}
+
+button {
+    background: #e75480;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 13px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 8px 4px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #c92d63;
+    transform: scale(1.04);
+}
+
+.secondary {
+    background: #f8a5c2;
+    color: #702344;
+}
+
+.page {
+    display: none;
+    animation: appear 0.8s ease;
+}
+
+.page.active {
+    display: block;
+}
+
+.memory {
+    background: #fff0f5;
+    padding: 17px;
+    border-radius: 18px;
+    margin: 15px 0;
+    border: 1px solid #ffd0e0;
+}
+
+.memory h3 {
+    margin-bottom: 10px;
+    color: #c92d63;
+}
+
+.question {
+    background: #fff0f5;
+    padding: 18px 12px;
+    border-radius: 18px;
+    margin: 20px 0;
+}
+
+.answer {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    background: #f8a5c2;
+    color: #702344;
+}
+
+.result {
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+.floating {
+    position: fixed;
+    bottom: -40px;
+    pointer-events: none;
+    animation: floatUp 5s linear forwards;
+    z-index: 10;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.small {
+    font-size: 12px;
+    color: #b65a7d;
+    margin-top: 25px;
+}
+
+.final-message {
+    background: #fff0f5;
+    border-radius: 20px;
+    padding: 20px 14px;
+    margin-top: 20px;
+}
+
+.nav {
+    margin-top: 25px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<!-- WELCOME PAGE -->
+
+<section id="welcome" class="page active">
+
+    <div class="heart">💗</div>
+
+    <h1>Hey, Abhi! 🥹</h1>
+
+    <p>
+        I made something special for you...
+        <br>
+        And it's filled with little pieces of my heart. 💌
+    </p>
+
+    <p>Are you ready for your surprise? 🎀</p>
+
+    <button onclick="showPage('story'); hearts(15)">
+        Open Your Surprise 🎁
+    </button>
+
+</section>
+
+
+<!-- LOVE STORY -->
+
+<section id="story" class="page">
+
+    <div class="heart">💌</div>
+
+    <h1>Our Love Story ❤️</h1>
+
+    <p>
+        It all started with one little message. 💗
+    </p>
+
+    <p>
+        One day, you texted me, and I never imagined
+        that one simple message would bring someone
+        so special into my life.
+    </p>
+
+    <p>
+        We started talking, slowly became best friends,
+        and shared so many little moments together.
+        Without even realizing it, you became someone
+        incredibly special to me. 🧸❤️
+    </p>
+
+    <p>
+        And then, our friendship turned into love.
+        The person who started as a stranger became
+        my best friend, and my best friend became
+        someone I fell in love with. 💖
+    </p>
+
+    <p>
+        Four years later, I'm still grateful for that
+        one message that brought you into my life.
+    </p>
+
+    <div class="final-message">
+        <b>
+            If I could go back to the beginning,
+            I'd still want our story to start with you,
+            Abhi. Every single time. ❤️
+        </b>
+    </div>
+
+    <button onclick="showPage('memories')">
+        Our Memories 🌷
+    </button>
+
+</section>
+
+
+<!-- OUR MEMORIES -->
+
+<section id="memories" class="page">
+
+    <div class="heart">🧸</div>
+
+    <h1>Our Memories 💗</h1>
+
+    <p>Little things, big feelings. 💌</p>
+
+    <div class="memory">
+        <h3>🌷 1. My Favourite Notification</h3>
+        <p>
+            Out of all the notifications I receive,
+            yours will always be my favourite.
+            A message from you can make my day special.
+        </p>
+    </div>
+
+    <div class="memory">
+        <h3>🧸 2. My Safe Place</h3>
+        <p>
+            Sometimes I don't need advice or solutions.
+            I just need someone who listens and understands me.
+            You're that special person to me, Abhi. ❤️
+        </p>
+    </div>
+
+    <div class="memory">
+        <h3>😂 3. Our Silly Moments</h3>
+        <p>
+            Our random conversations, silly jokes,
+            teasing each other, and laughing at the smallest things.
+            These moments mean more to me than you know. 💖
+        </p>
+    </div>
+
+    <div class="memory">
+        <h3>🥺 4. Even After Silly Fights</h3>
+        <p>
+            We may not always agree on everything.
+            But I hope we always remember that we're on the same team.
+            I'd rather understand you than win an argument. ❤️
+        </p>
+    </div>
+
+    <div class="memory">
+        <h3>🌙 5. The Little Things I Love</h3>
+        <p>
+            Your messages, our conversations,
+            and the little things that remind me of you.
+            Sometimes the smallest things make me happiest. 💌
+        </p>
+    </div>
+
+    <div class="memory">
+        <h3>♾️ 6. Four Years of Us</h3>
+        <p>
+            Four years of love, friendship, laughter,
+            and memories. If I could go back to that first message,
+            I'd choose that moment all over again. 💗
+        </p>
+    </div>
+
+    <div class="memory">
+        <h3>🫶 7. If You Ever Forget</h3>
+        <p>
+            If you ever wonder how special you are to me,
+            remember that I'm grateful you sent me that message.
+            I never knew it would lead me to you. 🥹
+        </p>
+    </div>
+
+    <div class="memory">
+        <h3>🌷 8. More Memories to Make</h3>
+        <p>
+            There are still so many little moments waiting for us.
+            More laughter, more conversations, more adventures,
+            and more reasons to smile together. ❤️
+        </p>
+    </div>
+
+    <button onclick="showPage('questions')">
+        Answer These, Abhi! 😏
+    </button>
+
+</section>
+
+
+<!-- LOVE QUESTIONS -->
+
+<section id="questions" class="page">
+
+    <div class="heart">💖</div>
+
+    <h1>Little Questions for You</h1>
+
+    <p>Let's see what you choose, Abhi! 🤭</p>
+
+    <div class="question">
+        <h3>1. Who fell in love first? 🙈</h3>
+
+        <button class="answer"
+        onclick="reply(this, 'Aww! You think it was me? 🥹❤️')">
+            Me 🙈
+        </button>
+
+        <button class="answer"
+        onclick="reply(this, 'Oh really, Abhi? 😏💗')">
+            You 😌
+        </button>
+
+        <button class="answer"
+        onclick="reply(this, 'Our story belongs to both of us! 💖')">
+            Both of us ❤️
+        </button>
+
+        <p class="result"></p>
+    </div>
+
+
+    <div class="question">
+        <h3>2. Who misses the other more? 🥹</h3>
+
+        <button class="answer"
+        onclick="reply(this, 'Someone is being honest! 💗')">
+            Me 💌
+        </button>
+
+        <button class="answer"
+        onclick="reply(this, 'Aww, I hope so! 🧸❤️')">
+            You 🫶
+        </button>
+
+        <button class="answer"
+        onclick="reply(this, 'Secret answer, huh? 🤭')">
+            Secret! 🙈
+        </button>
+
+        <p class="result"></p>
+    </div>
+
+
+    <div class="question">
+        <h3>3. Who is more dramatic? 😂</h3>
+
+        <button class="answer"
+        onclick="reply(this, 'Abhi, are you sure? 😂')">
+            Me 😇
+        </button>
+
+        <button class="answer"
+        onclick="reply(this, 'Caught you! 🤣❤️')">
+            You 😈
+        </button>
+
+        <button class="answer"
+        onclick="reply(this, 'Two dramatic people, one story! 😂💗')">
+            Both of us!
+        </button>
+
+        <p class="result"></p>
+    </div>
+
+
+    <div class="question">
+        <h3>4. If I steal your food, what will you do? 🍟</h3>
+
+        <button class="answer"
+        onclick="reply(this, 'That is actually so sweet! 🥹')">
+            Share it with you ❤️
+        </button>
+
+        <button class="answer"
+        onclick="reply(this, 'Haha! Protect your food, Abhi! 😂')">
+            Hide my food!
+        </button>
+
+        <button class="answer"
+        onclick="reply(this, 'Food wars have officially started! 🤣')">
+            Steal yours back!
+        </button>
+
+        <p class="result"></p>
+    </div>
+
+
+    <div class="question">
+        <h3>5. If you could choose a date, what would it be? 🌍</h3>
+
+        <button class="answer"
+        onclick="reply(this, 'A beach date sounds beautiful! 🌊❤️')">
+            Beach date 🌊
+        </button>
+
+        <button class="answer"
+        onclick="reply(this, 'Movie, snacks, and good company! 🎬')">
+            Movie date 🎬
+        </button>
+
+        <button class="answer"
+        onclick="reply(this, 'Any adventure is special with the right person! 💗')">
+            An adventure together 🎡
+        </button>
+
+        <p class="result"></p>
+    </div>
+
+
+    <div class="question">
+        <h3>6. One last question, Abhi! 💌</h3>
+
+        <p>
+            If you had to choose your favourite person
+            all over again, would you choose me? 🥹❤️
+        </p>
+
+        <button class="answer"
+        onclick="finalAnswer('YES, ALWAYS! ❤️')">
+            YES, ALWAYS! ❤️
+        </button>
+
+        <button class="answer"
+        onclick="finalAnswer('DOUBT POLLUM ILLA! 🫶')">
+            DOUBT POLLUM ILLA! 🫶
+        </button>
+
+        <button class="answer"
+        onclick="finalAnswer('YOU KNOW THE ANSWER! 💖')">
+            YOU KNOW THE ANSWER! 💖
+        </button>
+
+        <p id="lastAnswer" class="result"></p>
+    </div>
+
+    <button onclick="showPage('final'); hearts(30)">
+        Your Final Surprise 🎁
+    </button>
+
+</section>
+
+
+<!-- FINAL SURPRISE -->
+
+<section id="final" class="page">
+
+    <div class="heart">❤️</div>
+
+    <h1>Just For You, Abhi 🥹</h1>
+
+    <div class="final-message">
+
+        <p>Hey, Abhi… 💗</p>
+
+        <p>
+            Four years ago, you sent me a message.
+            You probably had no idea that one little message
+            would become such a beautiful part of my life. 💌
+        </p>
+
+        <p>
+            You came into my life as a stranger,
+            became my best friend, and eventually
+            became someone my heart chose. ❤️
+        </p>
+
+        <p>
+            I know we're not perfect. We may have silly fights,
+            misunderstandings, and days when things aren't easy.
+            But I'm grateful for the memories we've made
+            and the bond we share.
+        </p>
+
+        <p>
+            <b>
+                If I could go back to the day you first
+                messaged me, I'd choose that moment all over again.
+            </b>
+            🥹💗
+        </p>
+
+        <p>
+            Because that one message brought me my best friend,
+            my favourite person, and a love story I'll always treasure.
+        </p>
+
+        <p>
+            I can't promise that every day will be perfect,
+            but I hope we keep finding reasons to smile together,
+            keep making memories, and keep choosing to
+            understand each other.
+        </p>
+
+        <p>
+            You weren't just a message I received.
+            You became a beautiful part of my life. 🌷
+        </p>
+
+        <h2>❤️ YOU'LL ALWAYS HAVE A SPECIAL PLACE IN MY HEART, ABHI. ❤️</h2>
+
+        <p>
+            Four years with you, and you're still someone
+            I feel lucky to have in my life.
+            No matter where life takes us,
+            a part of my heart will always be grateful for you. 💌
+        </p>
+
+        <h2>I LOVE YOU, ABHI. 💗♾️</h2>
+
+        <p>Made with lots of love, just for you. 🎀</p>
+
+        <div style="font-size:40px">💌 🧸 🌷 💖</div>
+
+    </div>
+
+    <button onclick="showPage('welcome')">
+        Start Again 💗
+    </button>
+
+</section>
+
+
+<div class="small">
+    A tiny website, with a whole lot of love. 🎀
+</div>
+
+</div>
+
+
+<!-- MUSIC -->
+
+<audio id="music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicButton"
+style="position:fixed; bottom:12px; right:10px; z-index:20;"
+onclick="toggleMusic()">
+    🎵 Play Music
+</button>
+
+
+<script>
+
+function showPage(id) {
+    document.querySelectorAll(".page").forEach(page => {
+        page.classList.remove("active");
+    });
+
+    document.getElementById(id).classList.add("active");
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+
+function toggleMusic() {
+    const music = document.getElementById("music");
+    const button = document.getElementById("musicButton");
+
+    if (music.paused) {
+        music.play().then(() => {
+            button.innerHTML = "⏸️ Pause Music";
+        }).catch(() => {
+            alert("Please add music.mp3 to your GitHub repository first.");
+        });
+    } else {
+        music.pause();
+        button.innerHTML = "🎵 Play Music";
+    }
+}
+
+
+function reply(button, message) {
+    const question = button.closest(".question");
+    const result = question.querySelector(".result");
+
+    result.innerHTML = message;
+
+    hearts(5);
+}
+
+
+function finalAnswer(message) {
+    document.getElementById("lastAnswer").innerHTML =
+        message + "<br><br>You're
