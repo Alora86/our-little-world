@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Little Surprise 💗</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ffe0ec, #ffc2d8, #fff0f5);
+    font-family: Georgia, serif;
+    text-align: center;
+    overflow-x: hidden;
+    color: #8b214d;
+    padding: 20px;
+}
+
+.card {
+    background: rgba(255,255,255,0.85);
+    padding: 35px 22px;
+    border-radius: 25px;
+    box-shadow: 0 10px 35px #d96b9650;
+    max-width: 400px;
+    width: 100%;
+    animation: appear 1s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.heart {
+    font-size: 65px;
+    animation: beat 1s infinite;
+}
+
+@keyframes beat {
+    50% { transform: scale(1.15); }
+}
+
+h1 {
+    font-size: 27px;
+    margin: 18px 0;
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin: 15px 0;
+}
+
+button {
+    background: #e75480;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 13px 23px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 18px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #c92d63;
+    transform: scale(1.05);
+}
+
+#message {
+    display: none;
+    margin-top: 22px;
+    animation: appear 0.8s ease;
+}
+
+.floating {
+    position: fixed;
+    bottom: -30px;
+    animation: floatUp 5s linear forwards;
+    pointer-events: none;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.small {
+    font-size: 13px;
+    color: #b65a7d;
+    margin-top: 25px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="heart">💗</div>
+
+    <h1>Hey, You! 🥹</h1>
+
+    <p>
+        I made something for you...<br>
+        But there's a little catch. 🎀
+    </p>
+
+    <p>
+        You have to open your surprise yourself! 💌
+    </p>
+
+    <button onclick="firstSurprise()">
+        Open Your Surprise 🎁
+    </button>
+
+    <div id="message">
+
+        <h1>Surprise! 💖</h1>
+
+        <p>
+            Out of all the people in this world,<br>
+            I'm so glad our paths crossed. 🌷
+        </p>
+
+        <p>
+            You make ordinary moments feel special,
+            and little things become beautiful memories.
+        </p>
+
+        <p>
+            If I could give you one thing,
+            it would be the chance to see yourself
+            through my eyes. ❤️
+        </p>
+
+        <p>
+            Maybe then you'd understand
+            just how special you are to me. 🫶
+        </p>
+
+        <button onclick="secondSurprise()">
+            One More Thing... 💌
+        </button>
+
+        <div id="final" style="display:none">
+
+            <div class="heart">❤️</div>
+
+            <h1>It's You. Always You. 🌍</h1>
+
+            <p>
+                No matter how busy life gets,
+                I hope we always find little reasons
+                to smile together.
+            </p>
+
+            <p>
+                Thank you for being a part
+                of my world. 🥹💗
+            </p>
+
+            <p>
+                <b>You are my favourite notification,
+                my favourite hello,
+                and my favourite person. 💋</b>
+            </p>
+
+            <p>Made with lots of love, just for you. 💗</p>
+
+            <div style="font-size:35px">💌 🧸 🌷 💖</div>
+
+        </div>
+    </div>
+
+    <div class="small">
+        A tiny website, with a whole lot of love. 🎀
+    </div>
+
+</div>
+
+<script>
+function firstSurprise() {
+    document.getElementById("message").style.display = "block";
+    document.querySelector("button").style.display = "none";
+
+    for (let i = 0; i < 20; i++) {
+        setTimeout(createHeart, i * 150);
+    }
+}
+
+function secondSurprise() {
+    document.getElementById("final").style.display = "block";
+
+    let buttons = document.querySelectorAll("button");
+    buttons[1].style.display = "none";
+
+    for (let i = 0; i < 35; i++) {
+        setTimeout(createHeart, i * 120);
+    }
+}
+
+function createHeart() {
+    const heart = document.createElement("div");
+
+    heart.className = "floating";
+    heart.innerHTML = ["💗", "💕", "💖", "❤️", "✨"][
+        Math.floor(Math.random() * 5)
+    ];
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (18 + Math.random() * 20) + "px";
+    heart.style.animationDuration = (3 + Math.random() * 3) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 6000);
+}
+</script>
+
+</body>
+</html>
